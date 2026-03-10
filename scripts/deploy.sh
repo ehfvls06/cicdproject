@@ -1,3 +1,12 @@
-#!/usr/bin/env bash
-echo "> 배포 테스트 중: 현재 경로에 파일이 잘 복사되었는지 확인합니다."
-ls -al /home/ec2-user/cicdproject
+plugins {
+    id 'org.springframework.boot' version '2.7.15'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'java'
+}
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+repositories { mavenCentral() }
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
